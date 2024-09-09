@@ -4,14 +4,12 @@ Graspberry is a Raspberry Pi 5 project divided into two standalone mini-projects
 
 ## Project Structure
 
-1. **EMG Data Capture** (`/emg_capture`)
-   - Hardware design and software for capturing sEMG signals
-   - Real-time data acquisition and storage
+- `/hardware` - Schematics and designs for the custom EMG HAT
+- `/emg_capture` - EMG Data Capture mini-project
+- `/emg_classify` - EMG Classification mini-project
+- `/models` - Pre-trained classification models (gitignored)
 
-2. **EMG Classification** (`/emg_classify`)
-   - Real-time classification of EMG signals using pre-trained models
-
-## 1. EMG Data Capture
+## 1. EMG Data Capture (`/emg_capture`)
 
 ### Overview
 This mini-project provides tools for capturing surface EMG (sEMG) signals using a Raspberry Pi 5 and a custom HAT (Hardware Attached on Top).
@@ -21,21 +19,15 @@ This mini-project provides tools for capturing surface EMG (sEMG) signals using 
 - Data storage and basic visualization
 - Experiment configuration and management
 
-### Hardware
-- Raspberry Pi 5
-- Custom EMG HAT (schematics provided)
-- EMG electrodes and cables
-
 ### Usage
-1. Build the custom HAT using provided schematics
-2. Connect the HAT to Raspberry Pi 5
-3. Run the capture script:
+1. Ensure the custom EMG HAT is connected to Raspberry Pi 5
+2. Run the capture script:
    ```
    python emg_capture/capture.py
    ```
-4. Follow on-screen instructions to start/stop data capture
+3. Follow on-screen instructions to start/stop data capture
 
-## 2. EMG Classification
+## 2. EMG Classification (`/emg_classify`)
 
 ### Overview
 This mini-project uses pre-trained models to classify EMG signals in real-time.
@@ -59,6 +51,7 @@ This mini-project uses pre-trained models to classify EMG signals in real-time.
 ### Hardware
 - Raspberry Pi 5
 - Custom EMG HAT (schematics in `/hardware`)
+- EMG electrodes and cables
 
 ### Software Dependencies
 - Python 3.x
@@ -75,12 +68,14 @@ This mini-project uses pre-trained models to classify EMG signals in real-time.
    cd graspberry
    ```
 
-2. Install required Python packages:
+2. Build the custom HAT using schematics provided in the `/hardware` directory
+
+3. Install required Python packages:
    ```
    pip install -r requirements.txt
    ```
 
-3. Follow specific setup instructions in each mini-project's directory
+4. Follow specific setup instructions in each mini-project's directory
 
 ## Contributing
 
