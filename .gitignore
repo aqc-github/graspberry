@@ -1,0 +1,30 @@
+# Ignore contents of models folder, but keep the folder
+models/*
+!models/.gitkeep
+
+# Ignore all CSV files
+*.csv
+
+# Python-related files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.env
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
