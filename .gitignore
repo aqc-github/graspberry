@@ -1,30 +1,53 @@
-# Ignore contents of models folder, but keep the folder
-models/*
-!models/.gitkeep
+# Ignore built modules
+*.ko
+*.mod
+*.mod.c
+*.o
+*.order
+*.symvers
+.*.cmd
+.tmp_versions/
 
-# Ignore all CSV files
-*.csv
+# Ignore temporary files
+*~
+*.swp
+*.swo
 
-# Python-related files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environment
-venv/
-env/
-.env
-
-# IDE-specific files
+# Ignore IDE files
 .vscode/
 .idea/
 
-# OS-specific files
+# Ignore OS-specific files
 .DS_Store
 Thumbs.db
 
-# Logs
+# Ignore build artifacts
+Module.symvers
+modules.order
+
+# Ignore any compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore any log files
 *.log
 
-# Temporary files
-*.tmp
+# Ignore any backup files
+*.bak
+
+# Ignore any generated documentation
+/docs/_build/
+
+# Ignore any user-specific configuration files
+*.conf.user
+
+# Ignore any generated binaries
+/bin/
+/build/
+
+# Ignore any package files
+*.tar.gz
+*.zip
+
+# Ignore any environment-specific files
+.env
